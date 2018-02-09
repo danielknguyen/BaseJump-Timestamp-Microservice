@@ -1,0 +1,36 @@
+{
+  "name": "basejump-timestamp-microservice",
+  "version": "1.0.0",
+  "description": "Free-Code-Camp Backend API project -- Timestamp-Microservice",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielknguyen/BaseJump-Timestamp-Microservice.git"
+  },
+  "keywords": [
+    "HTML5",
+    "CSS3",
+    "Javascript",
+    "Node.js",
+    "Express.js"
+  ],
+  "author": "Daniel Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielknguyen/BaseJump-Timestamp-Microservice/issues"
+  },
+  "homepage": "https://github.com/danielknguyen/BaseJump-Timestamp-Microservice#readme",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "body-parser": "^1.18.2",
+    "consolidate": "^0.15.0",
+    "dotenv": "^5.0.0",
+    "express": "^4.16.2",
+    "moment": "^2.20.1",
+    "nunjucks": "^3.0.1"
+  }
+}
