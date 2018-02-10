@@ -34,9 +34,6 @@ var routes = routes = require('./public/scripts/routes.js')(app, moment);
 // set port of app
 var port = process.env.PORT || 8080;
 
-// set host ip to 0;
-// var host = '000.0.0.0';
-
 // listen for connection if success execute a callback function that logs that the server is listening
 var server = app.listen(port, function() {
   console.log("Express server is listening on port %s.", port);
