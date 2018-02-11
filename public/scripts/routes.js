@@ -61,7 +61,7 @@ module.exports = function(app, moment) {
       // check if valid unix
       let valid = moment(urlParameter, "X", true);
 
-      if (valid) {
+      if (valid.isValid()) {
         date.natural = unixToNatural(urlParameter);
         date.unix = urlParameter;
       } else {
