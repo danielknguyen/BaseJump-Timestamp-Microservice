@@ -13,7 +13,8 @@ var express = require('express'),
     engines = require('consolidate'),
     // error handling
     assert = require('assert'),
-    moment = require('moment');
+    moment = require('moment'),
+    isTimestamp = require( 'validate.io-timestamp' );
 
 // set where the view templates are located
 // ___dirname allows full path to directory to views
@@ -29,7 +30,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // execute route function with express server passed in as a parameter
-var routes = routes = require('./public/scripts/routes.js')(app, moment);
+var routes = routes = require('./public/scripts/routes.js')(app, moment, isTimestamp);
 
 // set port of app
 var port = process.env.PORT || 8080;
