@@ -31,7 +31,6 @@
     "dotenv": "^5.0.0",
     "express": "^4.16.2",
     "moment": "^2.20.1",
-    "nunjucks": "^3.0.1",
-    "validate.io-timestamp": "^1.0.2"
+    "nunjucks": "^3.0.1"
   }
 }

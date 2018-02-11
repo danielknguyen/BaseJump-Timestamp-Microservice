@@ -1,4 +1,4 @@
-module.exports = function(app, moment, isTimestamp) {
+module.exports = function(app, moment) {
 
   function unixToNatural(string) {
     var m = moment.unix(string);
@@ -58,8 +58,8 @@ module.exports = function(app, moment, isTimestamp) {
     // check unix logic
     if (!isNaN(urlParameter) > 0) {
 
-      // check if valid unix with validate timestamp module
-      let valid = isTimestamp(urlParameter * 1000);
+      // check if valid unix
+      let valid = moment(urlParameter, "X", true);
 
       if (valid) {
         date.natural = unixToNatural(urlParameter);
