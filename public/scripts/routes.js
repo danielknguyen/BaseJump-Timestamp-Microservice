@@ -54,17 +54,21 @@ module.exports = function(app, moment, isTimestamp) {
       date.natural = null;
       date.unix = null;
     }
-    // check if valid unix with validate timestamp module
-    let valid = isTimestamp(urlParameter * 1000);
+
     // check unix logic
-    if (!isNaN(urlParameter) > 0 && valid) {
-      // console.log("this ran " + urlParameter);
-      date.natural = unixToNatural(urlParameter);
-      date.unix = urlParameter;
-    } else {
-      date.natural = null;
-      date.unix = null;
-      console.log("this is the unix: " + valid);
+    if (!isNaN(urlParameter) > 0) {
+
+      // check if valid unix with validate timestamp module
+      let valid = isTimestamp(urlParameter * 1000);
+
+      if (valid) {
+        date.natural = unixToNatural(urlParameter);
+        date.unix = urlParameter;
+      } else {
+        date.natural = null;
+        date.unix = null;
+        // console.log("unix bool: " + valid);
+      }
     }
 
     res.send(date);
